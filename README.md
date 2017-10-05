@@ -70,6 +70,43 @@ This policy is to be added to an IAM Role that will grant privileges to Create A
 
 
 ## aws-vault setup
+Now that you have an IAM user and their API keys, we will follow with configuring aws-vault to securely access the AWS API using STS.
 
+This authentication system will allow us to use both AWS CLI and Terraform (or any other API tool).
+
+### awscli config
+AWS cli tools allows users to create config file that will contain all users, their MFA tokens, specific region for each profile, the assumed role.
+
+We can create nested profiles, sharing the same login, and change only the role or region.
+
+[A sample file can be found here](/dot_aws/config)
+
+It should be placed in the user $HOME/.aws/config path.
+
+Replace 'ACCOUNTID' with your actual account IDs.
+
+
+### aws-vault profiles
+
+#### Add profile
+To add an user to aws-vault, execute the following:
+```
+$ aws-vault add user1-billing
+```
+and enter the API credentials for the IAM user you created in the Billing account.
+
+the profile name should match the ones in the aws config file.
+
+#### login
+To login as that profile, execute:
+```
+$ aws-vault exec user1-billing -- 
+```
+
+#### Assume a Role
+To assume an IAM Role, execute:
+```
+$ aws-vault exec user1-billing-assumerole-create_account --
+```
 
 ## Command line
