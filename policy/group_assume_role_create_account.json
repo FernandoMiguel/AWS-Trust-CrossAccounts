@@ -1,6 +1,6 @@
 ## Description
 
-This policy Grants resources to access the Role 'OrganizationAccountAccessRole' in other accounts.
+This policy allows a resource to assume the Role 'assumerole-create_account'.
 This policy is to be added to an IAM group.
 
 {
@@ -13,7 +13,7 @@ This policy is to be added to an IAM group.
                 "sts:*"
             ],
             "Resource": [
-                "arn:aws:iam::*:role/OrganizationAccountAccessRole"
+                "arn:aws:iam::BILLING_ACCOUNTID:role/assumerole-create_account"
             ]
         }
     ]

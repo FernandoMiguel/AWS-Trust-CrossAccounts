@@ -1,0 +1,20 @@
+## Description
+
+Allow user to create AWS Org accounts
+This policy is to be added to an IAM Role that will grant privileges to Create AWS Organizations accounts under the Billing account.
+
+{
+    "Version": "2012-10-17",
+        "Statement": [
+        {
+            "Sid": "Stmt1507204409000",
+            "Effect": "Allow",
+            "Action": [
+                "organizations:CreateAccount"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
