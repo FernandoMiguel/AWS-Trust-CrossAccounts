@@ -1,8 +1,3 @@
-## Description
-
-This policy allows a resource to assume the Role 'assumerole-create_account'.
-This policy is to be added to an IAM group.
-
 {
     "Version": "2012-10-17",
     "Statement": [
