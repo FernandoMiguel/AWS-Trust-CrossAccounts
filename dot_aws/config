@@ -1,8 +1,12 @@
-[default]
-region = eu-west-2
-
 [user1-billing]
 region = eu-west-2
+mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
+
+[profile user1-billing-assumerole-create_delete_account]
+role_arn = arn:aws:iam::BILLING_ACCOUNTID:role/assumerole-create_delete_account
+source_profile = user1-billing
+mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
 [user2-iam]
 region = eu-west-2
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user2
