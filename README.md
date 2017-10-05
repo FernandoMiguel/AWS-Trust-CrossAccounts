@@ -29,6 +29,7 @@
         - [Add Trust](#add-trust)
             - [Read Trust policy](#read-trust-policy)
             - [Update Trust policy](#update-trust-policy)
+    - [Terraform](#terraform)
 
 <!-- /TOC -->
 
@@ -215,4 +216,9 @@ Then run the following to update the policy:
 ```
 $ aws iam update-assume-role-policy --role-name OrganizationAccountAccessRole --policy-document file:///tmp/Role-Trust-Policy.json
 ```
-Remember to switch between all new accounts so that the policy is added to all.
+**Remember to switch between all new accounts so that the policy is added to all.**
+
+## Terraform
+Blocked on 
+
+https://github.com/terraform-providers/terraform-provider-aws/issues/571
