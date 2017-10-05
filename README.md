@@ -1,9 +1,9 @@
 # AWS-Trust-CrossAccounts
-Examples for establishing Cross Account Trust relationship on AWS
+**Examples for establishing Cross Account Trust relationship on AWS**
 
 
 ## Introduction
-This documentation is aimed at allowing AWS account managers to setup new AWS accounts under AWS Organizations, using AWS CLI or Terraform.
+This documentation is aimed at allowing AWS account managers to setup new AWS [accounts](https://aws.amazon.com/account/) under [AWS Organizations](https://aws.amazon.com/organizations/), using [AWS CLI](https://aws.amazon.com/cli/) or [Terraform](https://www.terraform.io/).
 
 Following best practices, we will create an IAM account to manage all user logins and permissions.
 
@@ -21,9 +21,9 @@ Following best practices, we will create an IAM user in the  Billing account. Th
 
 That Group will have two policies attached to it.
 
-One policy (group_orgs_crossaccount) will be used to allow the users that are part of this group to Assume a Role, giving them specific privileges.
+One policy ([group_orgs_crossaccount](/policy/group_orgs_crossaccount.json)) will be used to allow the users that are part of this group to Assume a Role, giving them specific privileges.
 
-The other policy (group_create_aws_accounts) grants these users to Assume a Role in other accounts.
+The other policy ([group_create_aws_accounts](/policy/group_create_aws_accounts.json)) grants these users to Assume a Role in other accounts.
 
 
 ### Policy: group_orgs_crossaccount
@@ -44,15 +44,15 @@ https://signin.aws.amazon.com/switchrole?roleName=OrganizationAccountAccessRole&
 ### Policy: group_create_aws_accounts
 
 #### Description
-This policy allows a resource to assume the Role 'assumerole-create_account'.
+This policy allows a resource to assume the Role 'assumerole_create_account'.
 
 This policy is to be added to an IAM group.
 
 
-### Role: assumerole-create_account
+### Role: assumerole_create_account
 
 #### Description
-This role is assumed by an user, grating privileges to create AWS Orgs accounts
+This role is assumed by an user, grating privileges to create AWS Orgs accounts via policy [role_create_accounts](/policy/role_create_accounts.json)
 
 Create an IAM Role using the Billing Account ID as the trust relationship
 
