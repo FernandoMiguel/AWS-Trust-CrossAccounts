@@ -1,0 +1,8 @@
+[default]
+region = eu-west-2
+
+[user1-billing]
+region = eu-west-2
+
+[user2-iam]
+region = eu-west-2
