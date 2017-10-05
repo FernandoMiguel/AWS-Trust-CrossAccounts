@@ -1,25 +1,25 @@
-[user1-billing]
+[user1_billing]
 region = eu-west-2
 mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
-[profile user1-billing-assumerole-create_delete_account]
-role_arn = arn:aws:iam::BILLING_ACCOUNTID:role/assumerole-create_delete_account
-source_profile = user1-billing
+[profile user1_billing_assumerole_create_delete_account]
+role_arn = arn:aws:iam::BILLING_ACCOUNTID:role/assumerole_create_delete_account
+source_profile = user1_billing
 mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
-[profile user1-billing-assumerole_orgs_crossaccount_account_iam]
+[profile user1_billing_assumerole_orgs_crossaccount_account_iam]
 role_arn = arn:aws:iam::IAM_ACCOUNTID:role/OrganizationAccountAccessRole
-source_profile = user1-billing
+source_profile = user1_billing
 mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
-[profile user1-billing-assumerole_orgs_crossaccount_account02]
+[profile user1_billing_assumerole_orgs_crossaccount_account02]
 role_arn = arn:aws:iam::ACCOUNT02:role/OrganizationAccountAccessRole
-source_profile = user1-billing
+source_profile = user1_billing
 mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
-[profile user1-billing-assumerole_orgs_crossaccount_account03]
+[profile user1_billing_assumerole_orgs_crossaccount_account03]
 role_arn = arn:aws:iam::ACCOUNT03:role/OrganizationAccountAccessRole
-source_profile = user1-billing
+source_profile = user1_billing
 mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
 [user2-iam]
