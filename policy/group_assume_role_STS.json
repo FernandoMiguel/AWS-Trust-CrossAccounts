@@ -1,0 +1,19 @@
+## Description
+
+This policy is to be added to an IAM group that will grant privileges to assume an IAM Role.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1507208184000",
+            "Effect": "Allow",
+            "Action": [
+                "sts:*"
+            ],
+            "Resource": [
+                "arn:aws:iam::BILLING_ACCOUNTID:role/assumerole-create_delete_account"
+            ]
+        }
+    ]
+}
