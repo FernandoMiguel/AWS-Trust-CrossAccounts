@@ -3,7 +3,7 @@
 
 
 ## Introduction
-This documentation is aimed at allowing AWS account managers to setup new AWS [accounts](https://aws.amazon.com/account/) under [AWS Organizations](https://aws.amazon.com/organizations/), using [AWS CLI](https://aws.amazon.com/cli/) or [Terraform](https://www.terraform.io/).
+This documentation is aimed at allowing AWS account managers to setup new [AWS accounts](https://aws.amazon.com/account/) under [AWS Organizations](https://aws.amazon.com/organizations/), using [AWS CLI](https://aws.amazon.com/cli/) or [Terraform](https://www.terraform.io/).
 
 Following best practices, we will create an IAM account to manage all user logins and permissions.
 
