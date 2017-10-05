@@ -1,0 +1,17 @@
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1507204409000",
+            "Effect": "Allow",
+            "Action": [
+                "organizations:CreateAccount",
+                "organizations:DescribeAccount",
+                "organizations:DescribeCreateAccountStatus",
+                "organizations:ListAccounts"
+            ],
+            "Resource": [
+                "arn:aws:organizations::BILLING_ACCOUNTID:root/o-XXXXX/r-XXXXXX"
+            ]
+        }
+    ]
+}
