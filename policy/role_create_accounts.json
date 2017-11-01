@@ -1,11 +1,13 @@
 {
     "Version": "2012-10-17",
-        "Statement": [
+    "Statement": [
         {
             "Sid": "Stmt1507204409000",
             "Effect": "Allow",
             "Action": [
-                "organizations:CreateAccount"
+                "organizations:CreateAccount",
+                "organizations:ListAccounts",
+                "organizations:ListCreateAccountStatus"
             ],
             "Resource": [
                 "*"
